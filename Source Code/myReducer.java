@@ -63,7 +63,7 @@ public class myReducer extends Reducer<Text, LongWritable,Text, Text>{
             InterruptedException {
 		while(!sortedOutput_temp.isEmpty()){
 			ResultPair p1= sortedOutput_temp.pollFirst();
-			context.write(new Text(p1.key+" / "+pi.key.split(" ")[0] + "="), new Text(Double.toString(p1.relFreq)));
+			context.write(new Text(p1.key+" / "+pi.key.split(" ")[0] + " ="), new Text(Double.toString(p1.relFreq)));
 		}
 	}
 	
